@@ -1,0 +1,335 @@
+/* ===============================
+   CONTAINER & TITLE
+================================ */
+.maintenance-container {
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.maintenance-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   ADMIN FORM
+================================ */
+.admin-form {
+  background: #f3f4f6;
+  padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: flex-end;
+}
+
+.admin-form label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.admin-form input,
+.admin-form select {
+  width: 200px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.admin-form button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  background: #1d4ed8;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===============================
+   TABLE
+================================ */
+.maintenance-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.maintenance-table thead {
+  background: #f6f8fb;
+}
+
+.maintenance-table th {
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+  color: #475569;
+}
+
+.maintenance-table td {
+  padding: 12px;
+  color: #334155;
+  border-bottom: 1px solid #eee;
+}
+
+.maintenance-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.maintenance-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+/* ===============================
+   STATUS BADGES
+================================ */
+.status {
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.status.pending {
+  background: #fff3cd;
+  color: #856404;
+}
+
+.status.approval_pending {
+  background: #e8f0ff;
+  color: #1a4ed8;
+}
+
+.status.paid {
+  background: #e6f7ec;
+  color: #137333;
+}
+
+.status.rejected {
+  background: #fdecea;
+  color: #b71c1c;
+}
+
+/* ===============================
+   PAYMENT IMAGE
+================================ */
+.proof-thumb {
+  width: 90px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+
+/* ===============================
+   ACTION BUTTON BASE
+================================ */
+.btn,
+.action-btn {
+  min-width: 78px;            /* SAME WIDTH */
+  height: 32px;               /* SAME HEIGHT */
+  padding: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  margin: 2px;
+  transition: background-color 0.2s ease;
+}
+
+/* ===============================
+   BUTTON COLORS (ENABLED)
+================================ */
+.edit-btn {
+  background-color: #3b82f6;
+  color: #ffffff;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: #ffffff;
+}
+
+.approve-btn {
+  background-color: #10b981;
+  color: #ffffff;
+}
+
+.reject-btn {
+  background-color: #f97316;
+  color: #ffffff;
+}
+
+/* Hover (only when enabled) */
+.edit-btn:hover:not(:disabled) {
+  background-color: #2563eb;
+}
+
+.delete-btn:hover:not(:disabled) {
+  background-color: #dc2626;
+}
+
+.approve-btn:hover:not(:disabled) {
+  background-color: #059669;
+}
+
+.reject-btn:hover:not(:disabled) {
+  background-color: #ea580c;
+}
+
+/* ===============================
+   DISABLED / LOCKED BUTTONS
+================================ */
+.btn:disabled,
+.action-btn:disabled {
+  background-color: #e5e7eb;
+  color: #374151;
+  cursor: not-allowed;
+  opacity: 1;
+  min-width: 72px;
+  height: 30px;
+  font-size: 11px;
+  border: 1px dashed #9ca3af;
+}
+
+.btn:disabled::after {
+  content: " 🔒";
+  font-size: 11px;
+}
+
+/* ===============================
+   POPUP NOTIFICATION
+================================ */
+.popup {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  animation: popupFade 2.5s forwards;
+}
+
+.popup.success {
+  background-color: #10b981;
+}
+
+.popup.error {
+  background-color: #ef4444;
+}
+
+.popup.info {
+  background-color: #3b82f6;
+}
+
+@keyframes popupFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
+
+.maintenance-search {
+  margin: 20px 0;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.maintenance-search input {
+  width: 360px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: 1px solid #d0d0d0;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.maintenance-search input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.15);
+}
+
+
+/* ===============================
+   UPLOAD PAYMENT BUTTON
+   Used in Resident Maintenance
+================================ */
+
+/* Base upload button (enabled) */
+.btn.success {
+  background-color: #10b981;     /* Green – indicates positive action */
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 14px;
+  height: 32px;
+  min-width: 80px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+/* Hover effect (only when enabled) */
+.btn.success:hover:not(:disabled) {
+  background-color: #059669;     /* Slightly darker green */
+  transform: translateY(-1px);
+}
+
+/* Active click feedback */
+.btn.success:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+/* ===============================
+   DISABLED STATE
+   When payment is NOT pending
+================================ */
+
+.btn.success.disabled,
+.btn.success:disabled {
+  background-color: #e5e7eb;     /* Light grey */
+  color: #6b7280;                /* Muted text */
+  cursor: not-allowed;
+  border: 1px dashed #9ca3af;
+  opacity: 1;
+  font-size: 11px;
+}
+
+/* Optional lock icon for clarity */
+.btn.success.disabled::after,
+.btn.success:disabled::after {
+  content: " 🔒";
+  font-size: 11px;
+}

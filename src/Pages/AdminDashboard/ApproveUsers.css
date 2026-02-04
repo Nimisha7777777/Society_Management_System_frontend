@@ -1,0 +1,33 @@
+.approve-users-container {
+  padding: 20px;
+}
+
+.approve-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.approve-table th,
+.approve-table td {
+  padding: 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.approve-table th {
+  background: #f5f7fa;
+  text-align: left;
+}
+
+.approve-btn {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.approve-btn:hover {
+  background: #1d4ed8;
+}

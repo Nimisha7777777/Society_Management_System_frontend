@@ -1,0 +1,39 @@
+.admin-bookings h1 {
+  margin-bottom: 20px;
+}
+
+.bookings-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+
+.bookings-table th,
+.bookings-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+
+.bookings-table th {
+  background: #f5f7fa;
+  font-weight: 600;
+}
+
+.approve {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  margin-right: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.reject {
+  background: #dc3545;
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}

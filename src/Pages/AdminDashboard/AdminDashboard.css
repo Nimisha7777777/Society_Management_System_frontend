@@ -1,0 +1,88 @@
+.admin-dashboard-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* WELCOME BOX */
+.admin-welcome-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.admin-welcome-title {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.admin-welcome-subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+/* STAT CARDS */
+.admin-stats-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.admin-stat-card {
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: bold;
+  color: #1d4ed8;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+/* RECENT ACTIVITY */
+.admin-recent-box {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.recent-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.recent-list {
+  padding-left: 16px;
+}
+
+.recent-list li {
+  margin-bottom: 6px;
+  color: #444;
+}
+/* Reuse Member Dashboard Layout */
+.admin-action-btn {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.admin-action-btn:hover {
+  background: #2563eb;
+}

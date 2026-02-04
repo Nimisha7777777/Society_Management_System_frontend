@@ -1,0 +1,142 @@
+/* RegisterSociety.css */
+
+/* PAGE WRAPPER */
+.society-auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #f3f4f6; /* light gray background */
+  font-family: 'Arial', sans-serif;
+}
+
+/* CARD / FORM CONTAINER */
+.society-auth-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  width: 420px;
+  max-width: 95%;
+  transition: transform 0.3s ease;
+}
+
+.society-auth-card:hover {
+  transform: translateY(-3px);
+}
+
+/* TITLE & SUBTITLE */
+.society-auth-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.society-auth-subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* FORM */
+.society-auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* LABELS */
+.society-auth-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+  margin-bottom: 6px;
+  margin-top: 12px;
+}
+
+/* INPUTS */
+.society-auth-input {
+  padding: 10px 14px;
+  font-size: 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.society-auth-input:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* ERROR MESSAGES */
+.society-auth-error {
+  color: #b91c1c;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+/* SUCCESS ALERT */
+.society-auth-success {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  text-align: center;
+  font-size: 14px;
+  border-left: 4px solid #10b981;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* BUTTON */
+.society-auth-button {
+  margin-top: 24px;
+  padding: 12px;
+  background: #3b82f6;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.society-auth-button:hover {
+  background: #2563eb;
+  transform: translateY(-2px);
+}
+
+/* FOOTER / REDIRECT LINK */
+.society-auth-footer {
+  margin-top: 18px;
+  font-size: 13px;
+  text-align: center;
+  color: #6b7280;
+}
+
+.society-auth-link {
+  color: #3b82f6;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.society-auth-link:hover {
+  text-decoration: underline;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
