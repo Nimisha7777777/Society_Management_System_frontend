@@ -10,21 +10,33 @@ export default function MonthlyMaintenance() {
   const [bills, setBills] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const generate = async () => {
-    try {
-      setLoading(true);
-      await api.post(
-        `/api/admin/maintenance-config/generate?billMonth=${billMonth}&billYear=${billYear}`
-      );
-      toast.success("Maintenance generated");
-      await loadBills();
-    } catch (e) {
-      console.error(e);
-      toast.error("Generate failed");
-    } finally {
-      setLoading(false);
+const generate = async () => {
+  try {
+    setLoading(true);
+
+    const res = await api.post(
+      `/api/admin/maintenance-config/generate?billMonth=${billMonth}&billYear=${billYear}`
+    );
+
+    // backend returns a message string
+    const msg = typeof res.data === "string" ? res.data : "Maintenance generated";
+
+    // show warning if nothing generated
+    if (msg.toLowerCase().includes("nothing generated") || msg.toLowerCase().includes("no occupied")) {
+      toast.warn(msg);
+    } else {
+      toast.success(msg);
     }
-  };
+
+    await loadBills();
+  } catch (e) {
+    console.error(e);
+    toast.error(e?.response?.data?.message || "Generate failed");
+  } finally {
+    setLoading(false);
+  }
+};
+
 
   const loadBills = async () => {
     try {

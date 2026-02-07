@@ -21,31 +21,40 @@
   background-color: #f9fafb;
 }
 
+/* ===== COLUMNS ===== */
 .flats-table th:nth-child(1),
 .flats-table td:nth-child(1) {
-  width: 20%;
+  width: 16%; /* Tower */
 }
 
 .flats-table th:nth-child(2),
 .flats-table td:nth-child(2) {
-  width: 20%;
+  width: 16%; /* Flat No */
 }
 
 .flats-table th:nth-child(3),
 .flats-table td:nth-child(3) {
-  width: 20%;
+  width: 16%; /* BHK */
 }
 
 .flats-table th:nth-child(4),
 .flats-table td:nth-child(4) {
-  width: 15%;
+  width: 16%; /* Area */
 }
 
 .flats-table th:nth-child(5),
 .flats-table td:nth-child(5) {
-  width: 25%;   /* Actions column */
+  width: 16%; /* Status */
 }
 
+.flats-table th:nth-child(6),
+.flats-table td:nth-child(6) {
+  width: 28%; /* Actions */
+}
+
+.flats-table {
+  overflow-x: auto;
+}
 
 
 .status.occupied {
@@ -176,8 +185,8 @@
 
 .edit-btn,
 .delete-btn {
-  width: 78px;               /* 🔑 same width */
-  height: 34px;              /* 🔑 same height */
+  width: 78px;             
+  height: 34px;              
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -227,3 +236,43 @@
   border-color: #4f46e5;
   box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
 }
+
+/* ===== SELECT (BHK TYPE) ===== */
+.modal select {
+  width: 100%;
+  padding: 14px 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  background: #fff;
+  color: #111827;
+  transition: border 0.2s, box-shadow 0.2s;
+
+  /* nicer dropdown arrow + consistent look */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* dropdown arrow using background image */
+  background-image: linear-gradient(45deg, transparent 50%, #6b7280 50%),
+    linear-gradient(135deg, #6b7280 50%, transparent 50%);
+  background-position: calc(100% - 18px) calc(50% - 2px),
+    calc(100% - 12px) calc(50% - 2px);
+  background-size: 6px 6px, 6px 6px;
+  background-repeat: no-repeat;
+}
+
+.modal select:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.15);
+}
+
+/* Optional: disabled select styling (if you ever disable it) */
+.modal select:disabled {
+  background: #f3f4f6;
+  color: #6b7280;
+  cursor: not-allowed;
+}
+

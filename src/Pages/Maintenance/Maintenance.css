@@ -333,3 +333,198 @@
   content: " 🔒";
   font-size: 11px;
 }
+
+
+
+/* ===============================
+   MAINTENANCE SETTINGS (ONLY)
+   Does NOT affect other pages
+================================ */
+
+/* outer card for settings */
+.ms-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 16px;
+}
+
+/* highlighted method chooser */
+.ms-methods {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 16px;
+}
+
+.ms-methods-title {
+  font-weight: 800;
+  font-size: 16px;
+  margin: 0;
+}
+
+.ms-methods-sub {
+  margin-top: 4px;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.ms-method-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(280px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.ms-method-card {
+  border: 1px solid rgba(0,0,0,0.15);
+  background: #fff;
+  border-radius: 12px;
+  padding: 14px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.ms-method-card:hover {
+  transform: translateY(-1px);
+}
+
+.ms-method-card.active-sqft {
+  border: 2px solid #10b981;
+  background: rgba(16,185,129,0.06);
+}
+
+.ms-method-card.active-bhk {
+  border: 2px solid #3b82f6;
+  background: rgba(59,130,246,0.06);
+}
+
+.ms-method-row {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.ms-method-title {
+  font-weight: 800;
+}
+
+.ms-method-desc {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 4px;
+  line-height: 1.3;
+}
+
+/* config area uses GRID, not admin-form flex */
+.ms-config {
+  background: #f3f4f6;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.ms-config-title {
+  font-weight: 800;
+  font-size: 15px;
+  margin: 0;
+}
+
+.ms-config-sub {
+  margin-top: 4px;
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+.ms-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 14px;
+  margin-top: 12px;
+}
+
+.ms-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.ms-field label {
+  font-weight: 700;
+}
+
+.ms-field input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  background: #fff;
+}
+
+.ms-field small {
+  font-size: 12px;
+  opacity: 0.75;
+  line-height: 1.25;
+}
+
+/* BHK table layout */
+.ms-bhk {
+  margin-top: 12px;
+  display: grid;
+  grid-template-columns: 110px 110px minmax(200px, 1fr);
+  gap: 10px 12px;
+  align-items: center;
+}
+
+.ms-bhk-head {
+  font-size: 12px;
+  font-weight: 800;
+  opacity: 0.85;
+}
+
+.ms-bhk-type {
+  font-weight: 800;
+}
+
+.ms-bhk-amt {
+  width: 100%;
+  max-width: 260px;
+}
+
+/* save button line */
+.ms-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+/* responsive */
+@media (max-width: 900px) {
+  .ms-method-grid {
+    grid-template-columns: 1fr;
+  }
+  .ms-grid {
+    grid-template-columns: 1fr;
+  }
+  .ms-bhk {
+    grid-template-columns: 90px 90px 1fr;
+  }
+}
+
+.ms-bhk {
+  grid-template-columns: 90px 90px 160px; 
+}
+
+.ms-bhk-amt {
+  width: 160px;          
+  max-width: 160px;
+  text-align: right;     
+  font-weight: 600;
+  padding-right: 10px;
+}
+
+.ms-bhk-amt::placeholder {
+  text-align: left;
+  font-weight: 400;
+  opacity: 0.6;
+}
